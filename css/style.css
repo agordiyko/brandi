@@ -1221,7 +1221,11 @@ slick-slide slick-current slick-active @media (max-width: 447px) {
 	color: #4e4e4e;
 	transition: all 0.3s;
 }
+.form__span {
+	bottom: 58% !important;
+}
 .form__text {
+	display: block;
 	width: calc(100% - 10px);
 	position: relative;
 	background: transparent;
@@ -1237,7 +1241,7 @@ slick-slide slick-current slick-active @media (max-width: 447px) {
 .form__text:focus,
 .form__text:valid,
 .form__textarea:focus,
-.form__textarea:valid {
+.form__textarea:active {
 	border-bottom: 1px solid #0eb493;
 	transition: all 0.8s ease;
 }
@@ -1247,6 +1251,7 @@ slick-slide slick-current slick-active @media (max-width: 447px) {
 }
 
 .form__textarea {
+	display: block;
 	width: calc(100% - 10px);
 	position: relative;
 	background: transparent;
@@ -1258,19 +1263,20 @@ slick-slide slick-current slick-active @media (max-width: 447px) {
 	margin: 0 38px 30px 0;
 	padding: 16px 0;
 	resize: none;
+	overflow: auto;
 }
 .textarea {
 	width: 100%;
 	margin-right: 37px;
 }
-.textarea:after {
+.textarea::after {
 	width: 100%;
 	padding-right: 42px;
 }
 .form__text:focus ~ span,
 .form__textarea:focus ~ span,
 .form__text:valid ~ span,
-.form__textarea:valid ~ span {
+.form__textarea:active ~ span {
 	transform: translateY(-28px);
 	color: #0eb493;
 	font-size: 12px;
@@ -1292,7 +1298,7 @@ slick-slide slick-current slick-active @media (max-width: 447px) {
 	text-shadow: 0 0 60px #0eb493;
 	transition: all 0.3s ease;
 }
-.form__button:before {
+.form__button::before {
 	content: "";
 	display: block;
 	width: 24px;
